@@ -1,0 +1,54 @@
+.memory-partition,
+.memory-scale {
+  margin-left: 20px;
+  padding: 0px;
+}
+
+.clear {
+  clear: both;
+}
+
+.memory-scale div {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  height: 20px;
+  /* width: 4.8px; */
+  width: 66px;
+  border-left: 2px solid gray;
+  /* background-color: gray; */
+}
+
+.memory-partition div {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  height: 50px;
+  width: 4.8px;
+  border-left: 2px solid gray;
+  background-color: gray;
+}
+
+.memory-partition .red {
+  background-color: gray;
+}
+
+.memory-partition .green {
+  background-color: green;
+}
+
+.memory-partition .yellow {
+  background-color: yellow;
+}
+
+.memory-partition .orange {
+  background-color: orange;
+}
+
+.memory-partition .blue {
+  background-color: blue;
+}
+
+.memory-partition .border-red {
+  border-left: 2px solid red;
+}

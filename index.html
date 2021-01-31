@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link type="text/css" rel="stylesheet" href="./css/buttonStyle.css">
+  <link type="text/css" rel="stylesheet" href="./css/tableStyle.css">
+  <link type="text/css" rel="stylesheet" href="./css/partitionStyle.css">
+</head>
+
+<body>
+  <div class="button-area">
+    <div class="control">
+      <button type="button" class="button insert">添加进程</button>
+      <button type="button" class="button wait" disabled>阻塞进程</button>
+      <button type="button" class="button begin">开始运行</button>
+      <button type="button" class="sliceTime">
+        时间片：
+        <input type="text" size="4" value="2" />
+      </button>
+      <button type="button" class="usage" disabled>内存占用率：0%</button>
+    </div>
+    <div class="memory">
+      <input type="radio" name="memory" value="FF">首次适应算法
+      <input type="radio" name="memory" value="NF">循环首次适应算法
+      <input type="radio" name="memory" value="BF" checked>最佳适应算法
+      <input type="radio" name="memory" value="WF">最坏适应算法
+    </div>
+    <div class="scheduling">
+      <input type="radio" name="scheduling" value="FCFS">先来先服务
+      <input type="radio" name="scheduling" value="SJF">短作业优先
+      <input type="radio" name="scheduling" value="PSA">优先级
+      <input type="radio" name="scheduling" value="HRRN" checked>高响应比优先
+      <input type="radio" name="scheduling" value="RR">时间片轮转
+      <input type="radio" name="scheduling" value="MFQ">多级反馈队列
+    </div>
+  </div>
+  <div class="memory-scale">
+    <div>00</div>
+    <div>10</div>
+    <div>20</div>
+    <div>30</div>
+    <div>40</div>
+    <div>50</div>
+    <div>60</div>
+    <div>70</div>
+    <div>80</div>
+    <div>90</div>
+  </div>
+  <div class="clear"></div>
+  <div class="memory-partition">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="clear"></div>
+  <div class="table-area">
+    <table class="table" border="1" cellspacing="0" cellpadding="6">
+      <tr align="center">
+        <th>进程名</th>
+        <th>到达时间</th>
+        <th>所需时间</th>
+        <th>运行时间</th>
+        <th>等待时间</th>
+        <th>大小</th>
+        <th>起址</th>
+        <th>优先级/响应比</th>
+        <th>状态</th>
+        <th>唤醒</th>
+      </tr>
+    </table>
+  </div>
+
+  <script type="text/javascript" charset="utf-8" src="./js/scheduling/PCB.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/scheduling/Scheduling.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/scheduling/SJF.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/scheduling/FCFS.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/scheduling/RR.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/scheduling/PSA.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/scheduling/HRRN.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/scheduling/MFQ.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/dataStructure/Node.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/memory/MB.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/memory/MBLinkList.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/memory/MemoryManager.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/memory/FF.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/memory/NF.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/memory/BF.js"></script>
+  <script type="text/javascript" charset="utf-8" src="./js/memory/WF.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="./js/action.js"></script>
+
+</body>
+
+</html>

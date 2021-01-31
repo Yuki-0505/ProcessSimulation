@@ -1,0 +1,17 @@
+.button-area {
+  margin: 20px;
+}
+
+.button-area>div {
+  padding-top: 8px;
+}
+
+.button-area .button {
+  cursor: pointer;
+}
+
+.button-area .control .sliceTime input {
+  min-height: 10px;
+  border: 4px;
+  border-radius: 5%;
+}
