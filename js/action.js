@@ -51,12 +51,12 @@ insertButton.onclick = function () {
   }
   var rouseBtn = document.createElement('button');
   rouseBtn.innerText = "唤醒";
-  rouseBtn.setAttribute("disabled", "disabled");
+  rouseBtn.setAttribute("style", "visibility:hidden");
   rouseBtn.setAttribute("id", count);
   rouseBtn.onclick = function () {
     console.log("唤醒", rouseBtn.getAttribute("id"));
     scheduling.processWaitToReady(rouseBtn.getAttribute("id"));
-    rouseBtn.setAttribute("disabled", "disabled");
+    rouseBtn.setAttribute("style", "visibility:hidden");
   };
   row.appendChild(rouseBtn);
   table.appendChild(row);
@@ -146,7 +146,7 @@ function showTable() {
     table.children[i].setAttribute("class", getColor(attrs[len2 - 1]));
     table.children[i].children[len2 - 1].innerText = getStatusStr(attrs[len2 - 1]);
     if (attrs[8] == 3) {
-      table.children[i].children[9].removeAttribute("disabled");
+      table.children[i].children[9].removeAttribute("style");
     } else if (attrs[8] == 4) {
       table.children[i].children[1].innerText = "——";
     }

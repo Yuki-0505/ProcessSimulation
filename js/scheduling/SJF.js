@@ -11,10 +11,5 @@ function SJF() {
     return this.processReadyToRun();
   }
 }
-
-(function () {
-  var Super = function () {};
-  Super.prototype = Scheduling.prototype;
-  SJF.prototype = new Super();
-  SJF.prototype.constructor = SJF;
-})();
+SJF.prototype = new Scheduling();
+SJF.prototype.constructor = SJF;

@@ -11,10 +11,5 @@ function PSA() {
     return this.processReadyToRun();
   }
 }
-
-(function () {
-  var Super = function () {};
-  Super.prototype = Scheduling.prototype;
-  PSA.prototype = new Super();
-  PSA.prototype.constructor = PSA;
-})();
+PSA.prototype = new Scheduling();
+PSA.prototype.constructor = PSA;

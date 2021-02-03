@@ -20,10 +20,5 @@ function NF() {
     return this.findBySize(size, status);
   }
 }
-
-(function () {
-  var Super = function () {};
-  Super.prototype = MBLinkList.prototype;
-  NF.prototype = new Super();
-  NF.prototype.constructor = NF;
-})();
+NF.prototype = new MBLinkList();
+NF.prototype.constructor = NF;

@@ -39,10 +39,5 @@ function MFQ(sliceTime) {
     return true;
   }
 }
-
-(function () {
-  var Super = function () {};
-  Super.prototype = Scheduling.prototype;
-  MFQ.prototype = new Super();
-  MFQ.prototype.constructor = MFQ;
-})();
+MFQ.prototype = new Scheduling();
+MFQ.prototype.constructor = MFQ;

@@ -11,10 +11,5 @@ function FF() {
     return null;
   }
 }
-
-(function () {
-  var Super = function () {};
-  Super.prototype = MBLinkList.prototype;
-  FF.prototype = new Super();
-  FF.prototype.constructor = FF;
-})();
+FF.prototype = new MBLinkList();
+FF.prototype.constructor = FF;

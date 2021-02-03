@@ -12,10 +12,5 @@ function HRRN() {
     return this.processReadyToRun();
   }
 }
-
-(function () {
-  var Super = function () {};
-  Super.prototype = Scheduling.prototype;
-  HRRN.prototype = new Super();
-  HRRN.prototype.constructor = HRRN;
-})();
+HRRN.prototype = new Scheduling();
+HRRN.prototype.constructor = HRRN;

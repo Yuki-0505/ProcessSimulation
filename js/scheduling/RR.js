@@ -22,10 +22,5 @@ function RR(sliceTime) {
     return true;
   }
 }
-
-(function () {
-  var Super = function () {};
-  Super.prototype = Scheduling.prototype;
-  RR.prototype = new Super();
-  RR.prototype.constructor = RR;
-})();
+RR.prototype = new Scheduling();
+RR.prototype.constructor = RR;

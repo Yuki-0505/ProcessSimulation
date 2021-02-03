@@ -10,10 +10,5 @@ function FCFS() {
     return this.processReadyToRun();
   }
 }
-
-(function () {
-  var Super = function () {};
-  Super.prototype = Scheduling.prototype;
-  FCFS.prototype = new Super();
-  FCFS.prototype.constructor = FCFS;
-})();
+FCFS.prototype = new Scheduling();
+FCFS.prototype.constructor = FCFS;

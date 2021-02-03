@@ -12,10 +12,5 @@ function WF() {
     return null;
   }
 }
-
-(function () {
-  var Super = function () {};
-  Super.prototype = MBLinkList.prototype;
-  WF.prototype = new Super();
-  WF.prototype.constructor = WF;
-})();
+WF.prototype = new Super();
+WF.prototype.constructor = WF;
